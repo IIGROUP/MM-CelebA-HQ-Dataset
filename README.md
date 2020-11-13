@@ -1,6 +1,6 @@
 # Multi-Modal-CelebA-HQ
 
-[![Paper](http://img.shields.io/badge/paper-arxiv.svg)](https://arxiv.org/abs/1911.00679)
+[![Paper](http://img.shields.io/badge/paper-preprint-1bb3b3.svg)](https://arxiv.org)
 [![GitHub version](https://d25lcipzij17d.cloudfront.net/badge.svg?id=gh&type=6&v=0.1.1&x2=0)](https://github.com/Naereen/StrapDown.js)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
