@@ -18,17 +18,34 @@ Multi-Modal-CelebA-HQ can be used to **train and evaluate algorithms of text-to-
 ![image](https://github.com/weihaox/Multi-Modal-CelebA-HQ/blob/main/images/sample.png)
 
 ## Multi-Modal-CelebA-HQ Dataset Downloads
+
 * Google Drive: [downloading link](https://drive.google.com/)
-* Baidu Drive: [downloading link](https://pan.baidu.com/)
+* Baidu Drive: [downloading link](https://pan.baidu.com/s/1sSG4AXaCeAIywwaWkgkpAw) (password: y5w4)
+
+## Pretrained Models
+
+We provide the pretrained models of AttnGAN, ControlGAN, DMGAN, DFGAN, and ManiGAN. Updation of other methods are welcome!
+
+| Method     | FID     | LPIPIS |     Download   |
+|------------|---------|--------|----------------|
+| AttnGAN    | 125.98  | 0.512  | [Pretrained](https://pan.baidu.com/s/1sSG4AXaCeAIywwaWkgkpAw#list/path=%2Fsharelink592275190-930915969842492%2Fmulti-modal-celeba-released%2Fpretrained%20model%2Ftext2image%2FAttnGAN) |
+| ControlGAN | 116.32  | 0.522  | [Pretrained](https://pan.baidu.com/s/1sSG4AXaCeAIywwaWkgkpAw#list/path=%2Fsharelink592275190-930915969842492%2Fmulti-modal-celeba-released%2Fpretrained%20model%2Ftext2image%2FControlGAN) |
+| DFGAN      | 137.60  | 0.581  | [Pretrained](https://pan.baidu.com/s/1sSG4AXaCeAIywwaWkgkpAw#list/path=%2Fsharelink592275190-930915969842492%2Fmulti-modal-celeba-released%2Fpretrained%20model%2Ftext2image%2FDF-GAN) |
+| DM-GAN     | 131.05  | 0.544  | [Pretrained](https://pan.baidu.com/s/1sSG4AXaCeAIywwaWkgkpAw#list/path=%2Fsharelink592275190-930915969842492%2Fmulti-modal-celeba-released%2Fpretrained%20model%2Ftext2image%2FDMGAN) |
+| TediGAN    | 106.37  | 0.456  | [Pretrained](ttps://pan.baidu.com) |
 
 ## Related Works
 
 * **CelebA** dataset:<br/>
 Ziwei Liu, Ping Luo, Xiaogang Wang and Xiaoou Tang, "Deep Learning Face Attributes in the Wild", in IEEE International Conference on Computer Vision (ICCV), 2015 
 * **CelebA-HQ** was collected from CelebA and further post-processed by the following paper :<br/>
-Karras et. al, "Progressive Growing of GANs for Improved Quality, Stability, and Variation", in Internation Conference on Reoresentation Learning (ICLR), 2018
+Karras *et. al.*, "Progressive Growing of GANs for Improved Quality, Stability, and Variation", in Internation Conference on Reoresentation Learning (ICLR), 2018
 * **CelebAMask-HQ** manually-annotated masks with the size of 512 x 512 and 19 classes including all facial components and accessories such as skin, nose, eyes, eyebrows, ears, mouth, lip, hair, hat, eyeglass, earring, necklace, neck, and cloth. It was collected by the following paper :<br/>
-Lee et. al, "MaskGAN: Towards Diverse and Interactive Facial Image Manipulation", in Computer Vision and Pattern Recognition (CVPR), 2020
+Lee *et. al.*, "MaskGAN: Towards Diverse and Interactive Facial Image Manipulation", in Computer Vision and Pattern Recognition (CVPR), 2020
+
+## To Do
+
+- [ ] create a 3D model for each image
 
 ## Dataset Agreement
 * The Multi-Modal-CelebA-HQ dataset is available for **non-commercial research purposes** only.
