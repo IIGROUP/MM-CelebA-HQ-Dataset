@@ -4,7 +4,7 @@
 [![GitHub version](https://d25lcipzij17d.cloudfront.net/badge.svg?id=gh&type=6&v=0.1.1&x2=0)](https://github.com/Naereen/StrapDown.js)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
-**Multi-Modal-CelebA-HQ** is a large-scale face image dataset that has **30,000** high-resolution face images selected from the CelebA dataset by following CelebA-HQ. Each image has high-quality segmentation mask, sketch and descriptive text.
+**Multi-Modal-CelebA-HQ** is a large-scale face image dataset that has **30,000** high-resolution face images selected from the CelebA dataset by following CelebA-HQ. Each image has high-quality segmentation mask, sketch, descriptive text, and image with transparent background.
 
 Multi-Modal-CelebA-HQ can be used to **train and evaluate algorithms of text-to-image-generation, text-guided image manipulation, sketch-to-image generation, and GANs for face generation and editing**.
 
@@ -13,6 +13,7 @@ Multi-Modal-CelebA-HQ can be used to **train and evaluate algorithms of text-to-
 * The textual descriptions are generated using probabilistic context-free grammar (PCFG) based on the given attributes. We create ten unique single sentence descriptions per image to obtain more training data following the format of the popular [CUB](http://www.vision.caltech.edu/visipedia/CUB-200-2011.html) dataset and [COCO](http://cocodataset.org/#download) dataset.  The previous study proposed [CelebTD-HQ](https://arxiv.org/abs/2005.04909), but it is not publicly available.
 * For label, we use CelebAMask-HQ dataset, which contains manually-annotated semantic mask of facial attributes corresponding to CelebA-HQ. 
 * For sketches, we follow the same data generation pipeline as in [DeepFaceDrawing](http://www.geometrylearning.com/DeepFaceDrawing/). We first apply Photocopy filter in Photoshop to extract edges, which preserves facial details and introduces excessive noise, then apply the [sketch-simplification](https://github.com/bobbens/sketch_simplification) to get edge maps resembling hand-drawn sketches.
+* For background removing, we use an open-source tool [Rembg](https://github.com/danielgatis/rembg) and a commercial software [removebg](https://www.remove.bg/).
 
 ## Sample Data
 ![image](https://github.com/weihaox/Multi-Modal-CelebA-HQ/blob/main/images/sample.png)
@@ -45,8 +46,8 @@ Lee *et. al.*, "MaskGAN: Towards Diverse and Interactive Facial Image Manipulati
 
 ## To Do Lists
 
+- [x] remove the background of each image (release the first version at Nov.14, 2020)
 - [ ] create the 3D model for each image
-- [ ] remove the background of each image
 
 ## Dataset Agreement
 * The Multi-Modal-CelebA-HQ dataset is available for **non-commercial research purposes** only.
