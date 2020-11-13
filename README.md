@@ -19,12 +19,12 @@ Multi-Modal-CelebA-HQ can be used to **train and evaluate algorithms of text-to-
 
 ## Multi-Modal-CelebA-HQ Dataset Downloads
 
-* Google Drive: [downloading link](https://drive.google.com/)
+* Google Drive: [downloading link](https://drive.google.com/drive/folders/1eVrGKfkbw7bh9xPcX8HJa-qWQTD9aWvf)
 * Baidu Drive: [downloading link](https://pan.baidu.com/s/1sSG4AXaCeAIywwaWkgkpAw) (password: y5w4)
 
 ## Pretrained Models
 
-We provide the pretrained models of AttnGAN, ControlGAN, DMGAN, DFGAN, and ManiGAN. Updation of other methods are welcome!
+We provide the pretrained models of AttnGAN, ControlGAN, DMGAN, DFGAN, and ManiGAN. Feel free to pull requests if you have any updates.
 
 | Method     | FID     | LPIPIS |     Download   |
 |------------|---------|--------|----------------|
@@ -43,9 +43,10 @@ Karras *et. al.*, "Progressive Growing of GANs for Improved Quality, Stability, 
 * **CelebAMask-HQ** manually-annotated masks with the size of 512 x 512 and 19 classes including all facial components and accessories such as skin, nose, eyes, eyebrows, ears, mouth, lip, hair, hat, eyeglass, earring, necklace, neck, and cloth. It was collected by the following paper :<br/>
 Lee *et. al.*, "MaskGAN: Towards Diverse and Interactive Facial Image Manipulation", in Computer Vision and Pattern Recognition (CVPR), 2020
 
-## To Do
+## To Do Lists
 
-- [ ] create a 3D model for each image
+- [ ] create the 3D model for each image
+- [ ] remove the background of each image
 
 ## Dataset Agreement
 * The Multi-Modal-CelebA-HQ dataset is available for **non-commercial research purposes** only.
