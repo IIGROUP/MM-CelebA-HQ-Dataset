@@ -1,22 +1,38 @@
 # Multi-Modal-CelebA-HQ
 
-[![Paper](http://img.shields.io/badge/paper-preprint-1bb3b3.svg)](https://arxiv.org)
-[![GitHub version](https://d25lcipzij17d.cloudfront.net/badge.svg?id=gh&type=6&v=0.1.1&x2=0)](https://github.com/Naereen/StrapDown.js)
+[![Paper](http://img.shields.io/badge/paper-preprint-blue.svg)](https://arxiv.org/abs/2012.03308)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-blue.svg)](https://GitHub.com/Naereen/StrapDown.js/graphs/commit-activity)
+[![PR's Welcome](https://img.shields.io/badge/PRs-welcome-blue.svg?style=flat)](http://makeapullrequest.com) 
+![Images 30000](https://img.shields.io/badge/images-30,000-blue.svg?style=flat)
 
 **Multi-Modal-CelebA-HQ** is a large-scale face image dataset that has **30,000** high-resolution face images selected from the CelebA dataset by following CelebA-HQ. Each image has high-quality segmentation mask, sketch, descriptive text, and image with transparent background.
 
-Multi-Modal-CelebA-HQ can be used to **train and evaluate algorithms of text-to-image-generation, text-guided image manipulation, sketch-to-image generation, and GANs for face generation and editing**.
+Multi-Modal-CelebA-HQ can be used to **train and evaluate algorithms of text-to-image-generation, text-guided image manipulation, sketch-to-image generation, and GANs for face generation and editing**. This dataset is used in our proposed **[TediGAN](https://github.com/weihaox/TediGAN)**.
 
 ## Data Generation
 
 * The textual descriptions are generated using probabilistic context-free grammar (PCFG) based on the given attributes. We create ten unique single sentence descriptions per image to obtain more training data following the format of the popular [CUB](http://www.vision.caltech.edu/visipedia/CUB-200-2011.html) dataset and [COCO](http://cocodataset.org/#download) dataset. The previous study proposed [CelebTD-HQ](https://arxiv.org/abs/2005.04909), but it is not publicly available.
 * For label, we use CelebAMask-HQ dataset, which contains manually-annotated semantic mask of facial attributes corresponding to CelebA-HQ. 
 * For sketches, we follow the same data generation pipeline as in [DeepFaceDrawing](http://www.geometrylearning.com/DeepFaceDrawing/). We first apply Photocopy filter in Photoshop to extract edges, which preserves facial details and introduces excessive noise, then apply the [sketch-simplification](https://github.com/bobbens/sketch_simplification) to get edge maps resembling hand-drawn sketches.
-* For background removing, we use an open-source tool [Rembg](https://github.com/danielgatis/rembg) and a commercial software [removebg](https://www.remove.bg/). Different backgrounds can be further added using image composition or harmonization methods like [DoveNet](https://github.com/bcmi/Image_Harmonization_Datasets)
+* For background removing, we use an open-source tool [Rembg](https://github.com/danielgatis/rembg) and a commercial software [removebg](https://www.remove.bg/). Different backgrounds can be further added using image composition or harmonization methods like [DoveNet](https://github.com/bcmi/Image_Harmonization_Datasets).
 
-## Sample Data
+## Overview
+
 ![image](https://github.com/weihaox/Multi-Modal-CelebA-HQ/blob/main/images/sample.png)
+
+All data is hosted on Google Drive:
+
+| Path | Size | Files | Format | Description
+| :--- | :-- | ----: | :----: | :----------
+| [multi-modal-celeba](https://drive.google.com/drive/folders/1eVrGKfkbw7bh9xPcX8HJa-qWQTD9aWvf) | ~200 GB | 420,002 | | Main folder
+| &boxvr;&nbsp; [image](https://drive.google.com/open?id=1badu11NqxGf6qM3PTTooQDJvQbejgbTv) | ~2 GB | 30,000 | JPG | images from celeba-hq of size 512&times;512
+| &boxvr;&nbsp; [label](https://drive.google.com/open?id=1badu11NqxGf6qM3PTTooQDJvQbejgbTv) | ~1 GB | 30,000 | PNG | masks from celeba-mask-hq of size 512&times;512
+| &boxvr;&nbsp; [sketch](https://drive.google.com/drive/folders/1uCd0qDOqYkRyYzXyjdU9L9Ib-6X_ptBq) | 398 MB | 30,000 | PNG | sketches (10 samples and sketch.zip)
+| &boxvr;&nbsp; [text](https://drive.google.com/open?id=1LTBpJ0W_WLjqza3zdayligS8Dh1V1gA6) | 11 MB | 30,0000 | TXT | 10 descriptions of each image in celeba-mask-hq
+| &boxvr;&nbsp; [train](https://drive.google.com/file/d/1GdeTdBpi_IV7AuBpJAhLElqjswRmOy-7) | 347 KB | 1 | PKL | filenames of training images
+| &boxvr;&nbsp; [test](https://drive.google.com/file/d/1JNxgdvPMI_HHUq2-JUuJp8L7cD-74OAf) | 81 KB | 1 | PKL | filenames of test images
+| &boxur;&nbsp; [image with transparent background](https://drive.google.com/open?id=1tZUcXDBeOibC6jcMCtgRRz67pzrAHeHL) | ~200 GB | 30,000 | PNG | not fully uploaded
 
 ## Multi-Modal-CelebA-HQ Dataset Downloads
 
