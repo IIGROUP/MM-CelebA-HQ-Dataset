@@ -64,6 +64,7 @@ Lee *et. al.*, "MaskGAN: Towards Diverse and Interactive Facial Image Manipulati
 
 - [x] remove the background of each image (release the first version at Nov.14, 2020)
 - [ ] create the 3D model for each image
+- [ ] upload the inverted codes
 
 ## Dataset Agreement
 * The Multi-Modal-CelebA-HQ dataset is available for **non-commercial research purposes** only.
