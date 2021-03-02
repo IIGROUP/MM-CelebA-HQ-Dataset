@@ -8,7 +8,7 @@
 
 **Multi-Modal-CelebA-HQ** is a large-scale face image dataset that has **30,000** high-resolution face images selected from the CelebA dataset by following CelebA-HQ. Each image has high-quality segmentation mask, sketch, descriptive text, and image with transparent background.
 
-Multi-Modal-CelebA-HQ can be used to **train and evaluate algorithms of text-to-image-generation, text-guided image manipulation, sketch-to-image generation, and GANs for face generation and editing**. This dataset is used in our proposed **[TediGAN](https://github.com/weihaox/TediGAN)**.
+Multi-Modal-CelebA-HQ can be used to **train and evaluate algorithms of text-to-image generation, text-guided image manipulation, sketch-to-image generation, image caption, and VQA**. This dataset is used in our proposed **[TediGAN](https://github.com/weihaox/TediGAN)**.
 
 ## Data Generation
 
@@ -73,3 +73,35 @@ Lee *et. al.*, "MaskGAN: Towards Diverse and Interactive Facial Image Manipulati
 
 ## License and Citation
 The use of this software is RESTRICTED to **non-commercial research and educational purposes**.
+
+```bibtex
+@inproceedings{xia2020tedigan,
+  title={TediGAN: Text-Guided Diverse Face Image Generation and Manipulation},
+  author={Xia, Weihao and Yang, Yujiu and Xue, Jing-Hao and Wu, Baoyuan},
+  booktitle={IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
+  year={2020}
+}
+
+@inproceedings{karras2017progressive,
+  title={Progressive growing of gans for improved quality, stability, and variation},
+  author={Karras, Tero and Aila, Timo and Laine, Samuli and Lehtinen, Jaakko},
+  journal={International Conference on Learning Representations (ICLR)},
+  year={2018}
+}
+
+@inproceedings{liu2015faceattributes,
+ title = {Deep Learning Face Attributes in the Wild},
+ author = {Liu, Ziwei and Luo, Ping and Wang, Xiaogang and Tang, Xiaoou},
+ booktitle = {Proceedings of International Conference on Computer Vision (ICCV)},
+ year = {2015} 
+}
+```
+If you use the labels, please cite:
+```bibtex
+@inproceedings{CelebAMask-HQ,
+  title={MaskGAN: Towards Diverse and Interactive Facial Image Manipulation},
+  author={Lee, Cheng-Han and Liu, Ziwei and Wu, Lingyun and Luo, Ping},
+  booktitle={IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
+  year={2020}
+}
+```
