@@ -29,10 +29,10 @@ All data is hosted on Google Drive:
 | &boxvr;&nbsp; [image](https://drive.google.com/open?id=1badu11NqxGf6qM3PTTooQDJvQbejgbTv) | ~2 GB | 30,000 | JPG | images from celeba-hq of size 512&times;512
 | &boxvr;&nbsp; [label](https://drive.google.com/open?id=1badu11NqxGf6qM3PTTooQDJvQbejgbTv) | ~1 GB | 30,000 | PNG | masks from celeba-mask-hq of size 512&times;512
 | &boxvr;&nbsp; [sketch](https://drive.google.com/drive/folders/1uCd0qDOqYkRyYzXyjdU9L9Ib-6X_ptBq) | 398 MB | 30,000 | PNG | sketches (10 samples and sketch.zip)
-| &boxvr;&nbsp; [text](https://drive.google.com/open?id=1LTBpJ0W_WLjqza3zdayligS8Dh1V1gA6) | 11 MB | 30,0000 | TXT | 10 descriptions of each image in celeba-mask-hq
+| &boxvr;&nbsp; [text](https://drive.google.com/drive/folders/1ydS2O80rxIU0XtxWzmEI0XDKWEUN4ksI) | 11 MB | 30,0000 | TXT | 10 descriptions of each image in celeba-mask-hq
 | &boxvr;&nbsp; [train](https://drive.google.com/file/d/1GdeTdBpi_IV7AuBpJAhLElqjswRmOy-7) | 347 KB | 1 | PKL | filenames of training images
 | &boxvr;&nbsp; [test](https://drive.google.com/file/d/1JNxgdvPMI_HHUq2-JUuJp8L7cD-74OAf) | 81 KB | 1 | PKL | filenames of test images
-| &boxur;&nbsp; [image with transparent background](https://drive.google.com/open?id=1tZUcXDBeOibC6jcMCtgRRz67pzrAHeHL) | ~200 GB | 30,000 | PNG | not fully uploaded
+| &boxur;&nbsp; [rmebg](https://pan.baidu.com/s/17f9UVDiV9ELGNRvHbPbK7A) | ~20 GB | 30,000 | PNG | image with transparent background (password: tfpc)
 
 ## Multi-Modal-CelebA-HQ Dataset Downloads
 
@@ -61,7 +61,7 @@ Karras *et. al.*, "Progressive Growing of GANs for Improved Quality, Stability, 
 Lee *et. al.*, "MaskGAN: Towards Diverse and Interactive Facial Image Manipulation", in Computer Vision and Pattern Recognition (CVPR), 2020
 
 ## To Do Lists
-
+- [x] upload image with transparent background
 - [x] remove the background of each image (release the first version at Nov.14, 2020)
 - [ ] create the 3D model for each image
 - [ ] upload the inverted codes
@@ -81,6 +81,13 @@ If you find this dataset helpful for your research, please consider to cite:
   title={TediGAN: Text-Guided Diverse Face Image Generation and Manipulation},
   author={Xia, Weihao and Yang, Yujiu and Xue, Jing-Hao and Wu, Baoyuan},
   booktitle={IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
+  year={2021}
+}
+
+@article{xia2021open,
+  title={Towards Open-World Text-Guided Face Image Generation and Manipulation},
+  author={Xia, Weihao and Yang, Yujiu and Xue, Jing-Hao and Wu, Baoyuan},
+  journal={arxiv preprint arxiv: 2104.08910},
   year={2021}
 }
 
