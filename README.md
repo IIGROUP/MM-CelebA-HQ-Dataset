@@ -32,7 +32,7 @@ All data is hosted on Google Drive:
 | &boxvr;&nbsp; [text](https://drive.google.com/drive/folders/1ydS2O80rxIU0XtxWzmEI0XDKWEUN4ksI) | 11 MB | 30,0000 | TXT | 10 descriptions of each image in celeba-mask-hq
 | &boxvr;&nbsp; [train](https://drive.google.com/file/d/1GdeTdBpi_IV7AuBpJAhLElqjswRmOy-7) | 347 KB | 1 | PKL | filenames of training images
 | &boxvr;&nbsp; [test](https://drive.google.com/file/d/1JNxgdvPMI_HHUq2-JUuJp8L7cD-74OAf) | 81 KB | 1 | PKL | filenames of test images
-| &boxur;&nbsp; [rmebg](https://pan.baidu.com/s/17f9UVDiV9ELGNRvHbPbK7A) | ~20 GB | 30,000 | PNG | image with transparent background (password: tfpc)
+| &boxur;&nbsp; [rmebg](https://pan.baidu.com/s/1UX2NBW8MXu2IM9yxGcdOLw) | ~20 GB | 30,000 | PNG | image with transparent background (password: 3amt)
 
 ## Multi-Modal-CelebA-HQ Dataset Downloads
 
