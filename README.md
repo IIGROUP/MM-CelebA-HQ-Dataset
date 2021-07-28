@@ -25,7 +25,7 @@ All data is hosted on Google Drive:
 
 | Path | Size | Files | Format | Description
 | :--- | :-- | ----: | :----: | :----------
-| [multi-modal-celeba](https://drive.google.com/drive/folders/1eVrGKfkbw7bh9xPcX8HJa-qWQTD9aWvf) | ~200 GB | 420,002 | | Main folder
+| [multi-modal-celeba](https://drive.google.com/drive/folders/1eVrGKfkbw7bh9xPcX8HJa-qWQTD9aWvf) | ~20 GB | 420,002 | | Main folder
 | &boxvr;&nbsp; [image](https://drive.google.com/open?id=1badu11NqxGf6qM3PTTooQDJvQbejgbTv) | ~2 GB | 30,000 | JPG | images from celeba-hq of size 512&times;512
 | &boxvr;&nbsp; [label](https://drive.google.com/open?id=1badu11NqxGf6qM3PTTooQDJvQbejgbTv) | ~1 GB | 30,000 | PNG | masks from celeba-mask-hq of size 512&times;512
 | &boxvr;&nbsp; [sketch](https://drive.google.com/drive/folders/1uCd0qDOqYkRyYzXyjdU9L9Ib-6X_ptBq) | 398 MB | 30,000 | PNG | sketches (10 samples and sketch.zip)
