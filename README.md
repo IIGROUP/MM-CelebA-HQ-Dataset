@@ -1,7 +1,6 @@
 # Multi-Modal-CelebA-HQ
 
 [![Paper](http://img.shields.io/badge/paper-preprint-blue.svg)](https://arxiv.org/abs/2012.03308)
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-blue.svg)](https://GitHub.com/Naereen/StrapDown.js/graphs/commit-activity)
 [![PR's Welcome](https://img.shields.io/badge/PRs-welcome-blue.svg?style=flat)](http://makeapullrequest.com) 
 ![Images 30000](https://img.shields.io/badge/images-30,000-blue.svg?style=flat)
@@ -21,23 +20,17 @@ Multi-Modal-CelebA-HQ can be used to **train and evaluate algorithms of text-to-
 
 ![image](https://github.com/weihaox/Multi-Modal-CelebA-HQ/blob/main/images/sample.png)
 
-All data is hosted on Google Drive:
+**Note:** Upon request, the download links of raw data and annotations have been removed from this repo. Please redirect to their original [site](https://github.com/switchablenorms/CelebAMask-HQ) for the raw data and email me for the post-processing scripts. 
+
+~~All data is hosted on Google Drive.~~ (not available)
 
 | Path | Size | Files | Format | Description
 | :--- | :-- | ----: | :----: | :----------
 | [multi-modal-celeba](https://drive.google.com/drive/folders/1eVrGKfkbw7bh9xPcX8HJa-qWQTD9aWvf) | ~20 GB | 420,002 | | Main folder
 | &boxvr;&nbsp; [image](https://drive.google.com/open?id=1badu11NqxGf6qM3PTTooQDJvQbejgbTv) | ~2 GB | 30,000 | JPG | images from celeba-hq of size 512&times;512
-| &boxvr;&nbsp; [label](https://drive.google.com/open?id=1badu11NqxGf6qM3PTTooQDJvQbejgbTv) | ~1 GB | 30,000 | PNG | masks from celeba-mask-hq of size 512&times;512
-| &boxvr;&nbsp; [sketch](https://drive.google.com/drive/folders/1uCd0qDOqYkRyYzXyjdU9L9Ib-6X_ptBq) | 398 MB | 30,000 | PNG | sketches (10 samples and sketch.zip)
-| &boxvr;&nbsp; [text](https://drive.google.com/drive/folders/1ydS2O80rxIU0XtxWzmEI0XDKWEUN4ksI) | 11 MB | 30,0000 | TXT | 10 descriptions of each image in celeba-mask-hq
+| &boxvr;&nbsp; [text](https://drive.google.com/drive/folders/1ydS2O80rxIU0XtxWzmEI0XDKWEUN4ksI) | 11 MB | 30,0000 | TXT | 10 descriptions of each image in celeba-hq
 | &boxvr;&nbsp; [train](https://drive.google.com/file/d/1GdeTdBpi_IV7AuBpJAhLElqjswRmOy-7) | 347 KB | 1 | PKL | filenames of training images
 | &boxvr;&nbsp; [test](https://drive.google.com/file/d/1JNxgdvPMI_HHUq2-JUuJp8L7cD-74OAf) | 81 KB | 1 | PKL | filenames of test images
-| &boxur;&nbsp; [rmebg](https://pan.baidu.com/s/1UX2NBW8MXu2IM9yxGcdOLw) | ~20 GB | 30,000 | PNG | image with transparent background (password: 3amt)
-
-## Multi-Modal-CelebA-HQ Dataset Downloads
-
-* Google Drive: [downloading link](https://drive.google.com/drive/folders/1eVrGKfkbw7bh9xPcX8HJa-qWQTD9aWvf)
-* Baidu Drive: [downloading link](https://pan.baidu.com/s/1sSG4AXaCeAIywwaWkgkpAw) (password: y5w4)
 
 ## Pretrained Models
 
@@ -60,19 +53,9 @@ Karras *et. al.*, "Progressive Growing of GANs for Improved Quality, Stability, 
 * **CelebAMask-HQ** manually-annotated masks with the size of 512 x 512 and 19 classes including all facial components and accessories such as skin, nose, eyes, eyebrows, ears, mouth, lip, hair, hat, eyeglass, earring, necklace, neck, and cloth. It was collected by the following paper :<br/>
 Lee *et. al.*, "MaskGAN: Towards Diverse and Interactive Facial Image Manipulation", in Computer Vision and Pattern Recognition (CVPR), 2020
 
-## To Do Lists
-- [x] upload image with transparent background
-- [x] remove the background of each image (release the first version at Nov.14, 2020)
-- [ ] create the 3D model for each image
-- [ ] upload the inverted codes
-
-## Dataset Agreement
-* The Multi-Modal-CelebA-HQ dataset is available for **non-commercial research purposes** only.
-* You agree **not to** reproduce, duplicate, copy, sell, trade, resell or exploit for any commercial purposes, any portion of the images and any portion of derived data.
-* You agree **not to** further copy, publish or distribute any portion of the CelebAMask-HQ dataset. Except, for internal use at a single site within the same organization it is allowed to make copies of the dataset.
-
 ## License and Citation
-The use of this software is RESTRICTED to **non-commercial research and educational purposes**.
+
+The use of this software is RESTRICTED to **non-commercial research and educational purposes**. The license is the same as in CelebAMask-HQ.
 
 If you find this dataset helpful for your research, please consider to cite:
 
