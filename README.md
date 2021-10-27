@@ -22,7 +22,7 @@ Multi-Modal-CelebA-HQ can be used to **train and evaluate algorithms of text-to-
 
 **Note:** Upon request, the download links of raw data and annotations have been removed from this repo. Please redirect to their original [site](https://github.com/switchablenorms/CelebAMask-HQ) for the raw data and email me for the post-processing scripts. 
 
-~~All data is hosted on Google Drive.~~ (not available)
+~~All data is hosted on Google Drive~~ (not available). Those with problems accessing Google Drive can refer to an alternative link at [BaiduYun](https://pan.baidu.com/s/1KgOLhi8HPbcDTVPWCQ-T8g) (code: m7w8).
 
 | Path | Size | Files | Format | Description
 | :--- | :-- | ----: | :----: | :----------
@@ -34,7 +34,7 @@ Multi-Modal-CelebA-HQ can be used to **train and evaluate algorithms of text-to-
 
 ## Pretrained Models
 
-We provide the pretrained models of AttnGAN, ControlGAN, DMGAN, DFGAN, and ManiGAN. Feel free to pull requests if you have any updates.
+We provide the pretrained models of AttnGAN, ControlGAN, DMGAN, DFGAN, and ManiGAN. Please consider citing our paper if you use these pretrained models.
 
 | Method     | FID     | LPIPIS |     Download   |
 |------------|---------|--------|----------------|
@@ -42,7 +42,7 @@ We provide the pretrained models of AttnGAN, ControlGAN, DMGAN, DFGAN, and ManiG
 | ControlGAN | 116.32  | 0.522  | [Pretrained](https://pan.baidu.com/s/1sSG4AXaCeAIywwaWkgkpAw#list/path=%2Fsharelink592275190-930915969842492%2Fmulti-modal-celeba-released%2Fpretrained%20model%2Ftext2image%2FControlGAN) |
 | DFGAN      | 137.60  | 0.581  | [Pretrained](https://pan.baidu.com/s/1sSG4AXaCeAIywwaWkgkpAw#list/path=%2Fsharelink592275190-930915969842492%2Fmulti-modal-celeba-released%2Fpretrained%20model%2Ftext2image%2FDF-GAN) |
 | DM-GAN     | 131.05  | 0.544  | [Pretrained](https://pan.baidu.com/s/1sSG4AXaCeAIywwaWkgkpAw#list/path=%2Fsharelink592275190-930915969842492%2Fmulti-modal-celeba-released%2Fpretrained%20model%2Ftext2image%2FDMGAN) |
-| TediGAN    | 106.37  | 0.456  | [Pretrained](ttps://pan.baidu.com) |
+| TediGAN    | 106.37  | 0.456  | [Pretrained](https://github.com/IIGROUP/TediGAN) |
 
 ## Related Works
 
@@ -55,9 +55,7 @@ Lee *et. al.*, "MaskGAN: Towards Diverse and Interactive Facial Image Manipulati
 
 ## License and Citation
 
-The use of this software is RESTRICTED to **non-commercial research and educational purposes**. The license is the same as in CelebAMask-HQ.
-
-If you find this dataset helpful for your research, please consider to cite:
+If you find the dataset and pretrained models helpful for your research, please consider to cite:
 
 ```bibtex
 @inproceedings{xia2021tedigan,
@@ -97,3 +95,4 @@ If you use the labels, please cite:
   year={2020}
 }
 ```
+The use of this software is RESTRICTED to **non-commercial research and educational purposes**. The license is the same as in CelebAMask-HQ.
