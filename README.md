@@ -22,27 +22,29 @@ Multi-Modal-CelebA-HQ can be used to **train and evaluate algorithms of text-to-
 
 **Note:** Upon request, the download links of raw data and annotations have been removed from this repo. Please redirect to their original [site](https://github.com/switchablenorms/CelebAMask-HQ) for the raw data and email me for the post-processing scripts. 
 
-~~All data is hosted on Google Drive~~ (not available). Those with problems accessing Google Drive can refer to an alternative link at [BaiduYun](https://pan.baidu.com/s/1KgOLhi8HPbcDTVPWCQ-T8g) (code: m7w8).
+~~All data is hosted on Google Drive~~ (not available).
 
 | Path | Size | Files | Format | Description
 | :--- | :-- | ----: | :----: | :----------
-| [multi-modal-celeba](https://drive.google.com/drive/folders/1eVrGKfkbw7bh9xPcX8HJa-qWQTD9aWvf) | ~20 GB | 420,002 | | Main folder
-| &boxvr;&nbsp; [image](https://drive.google.com/open?id=1badu11NqxGf6qM3PTTooQDJvQbejgbTv) | ~2 GB | 30,000 | JPG | images from celeba-hq of size 512&times;512
+| [multi-modal-celeba](https://drive.google.com/drive/folders/1TxsSzPhZsJNijIXPINv05IUWhG3vBU-X) | ~20 GB | 420,002 | | Main folder
+| &boxvr;&nbsp; [image](https://drive.google.com/drive/folders/1xQTeXvu7-fHR7Legsw2EgWDvSrTM4iUw) | ~2 GB | 30,000 | JPG | images from celeba-hq of size 512&times;512
 | &boxvr;&nbsp; [text](https://drive.google.com/drive/folders/1ydS2O80rxIU0XtxWzmEI0XDKWEUN4ksI) | 11 MB | 30,0000 | TXT | 10 descriptions of each image in celeba-hq
-| &boxvr;&nbsp; [train](https://drive.google.com/file/d/1GdeTdBpi_IV7AuBpJAhLElqjswRmOy-7) | 347 KB | 1 | PKL | filenames of training images
-| &boxvr;&nbsp; [test](https://drive.google.com/file/d/1JNxgdvPMI_HHUq2-JUuJp8L7cD-74OAf) | 81 KB | 1 | PKL | filenames of test images
+| &boxvr;&nbsp; [train](https://drive.google.com/drive/folders/1I2YRoCOVxsFIHPQN1lAQhot9JwvzOACC) | 347 KB | 1 | PKL | filenames of training images
+| &boxvr;&nbsp; [test](https://drive.google.com/drive/folders/1AASJLlRsTHBfmgNO-12nhp4cp8Aqz_GG) | 81 KB | 1 | PKL | filenames of test images
 
 ## Pretrained Models
 
-We provide the pretrained models of AttnGAN, ControlGAN, DMGAN, DFGAN, and ManiGAN. Please consider citing our paper if you use these pretrained models.
+We provide the pretrained models of AttnGAN, ControlGAN, DMGAN, DFGAN, and ManiGAN. Please consider citing our paper if you use these pretrained models. Feel free to pull requests if you have any updates. Feel free to pull requests if you have any updates.
 
 | Method     | FID     | LPIPIS |     Download   |
 |------------|---------|--------|----------------|
-| AttnGAN    | 125.98  | 0.512  | [Pretrained](https://pan.baidu.com/s/1sSG4AXaCeAIywwaWkgkpAw#list/path=%2Fsharelink592275190-930915969842492%2Fmulti-modal-celeba-released%2Fpretrained%20model%2Ftext2image%2FAttnGAN) |
-| ControlGAN | 116.32  | 0.522  | [Pretrained](https://pan.baidu.com/s/1sSG4AXaCeAIywwaWkgkpAw#list/path=%2Fsharelink592275190-930915969842492%2Fmulti-modal-celeba-released%2Fpretrained%20model%2Ftext2image%2FControlGAN) |
-| DFGAN      | 137.60  | 0.581  | [Pretrained](https://pan.baidu.com/s/1sSG4AXaCeAIywwaWkgkpAw#list/path=%2Fsharelink592275190-930915969842492%2Fmulti-modal-celeba-released%2Fpretrained%20model%2Ftext2image%2FDF-GAN) |
-| DM-GAN     | 131.05  | 0.544  | [Pretrained](https://pan.baidu.com/s/1sSG4AXaCeAIywwaWkgkpAw#list/path=%2Fsharelink592275190-930915969842492%2Fmulti-modal-celeba-released%2Fpretrained%20model%2Ftext2image%2FDMGAN) |
-| TediGAN    | 106.37  | 0.456  | [Pretrained](https://github.com/IIGROUP/TediGAN) |
+| AttnGAN    | 125.98  | 0.512  | [Google Drive](https://drive.google.com/drive/folders/1olWw-p1PTK4mMJgLAYx5j-bnL6Ak1uYU?usp=sharing) |
+| ControlGAN | 116.32  | 0.522  | [Google Drive](https://drive.google.com/drive/folders/1aIzsZr-annEwQ-9URybvuXNVjmBno2DK?usp=sharing) |
+| DFGAN      | 137.60  | 0.581  | [Google Drive](https://drive.google.com/drive/folders/1bmgMpO7Xu6miqZOvc3DjcPnWtfb3DMNl?usp=sharing) |
+| DM-GAN     | 131.05  | 0.544  | [Google Drive](https://drive.google.com/drive/folders/1DndfSLQQK_s8noBaqQ1KjTxKGnLp9x_D?usp=sharing) |
+| TediGAN    | 106.37  | 0.456  | [Google Drive](https://github.com/IIGROUP/TediGAN) |
+
+The pretrained model of ManiGAN is [here](https://drive.google.com/drive/folders/1TUCQAuOsWEtq95NpyD__xLZVehANY6mc). The training scripts and pretrained models on faces of sketch-to-to-image and label-to-image can be found [here](https://drive.google.com/drive/folders/11VLGrpPLmXMH2o1HyIJLO-JiENp1Gx-t). Those with problems accessing Google Drive can refer to an alternative link at [Baidu Cloud](https://pan.baidu.com/s/1Xipa0rOGej40BTwWSdcJAA) (code: b273) for the dataset and pretrained models.
 
 ## Related Works
 
