@@ -5,22 +5,61 @@
 [![PR's Welcome](https://img.shields.io/badge/PRs-welcome-blue.svg?style=flat)](http://makeapullrequest.com) 
 ![Images 30000](https://img.shields.io/badge/images-30,000-blue.svg?style=flat)
 
-**Multi-Modal-CelebA-HQ** is a large-scale face image dataset that has **30,000** high-resolution face images selected from the CelebA dataset by following CelebA-HQ. Each image has high-quality segmentation mask, sketch, descriptive text, and image with transparent background.
+**Multi-Modal-CelebA-HQ** (MM-CelebA-HQ) is a large-scale face image dataset that has 30k high-resolution face images selected from the [CelebA](https://mmlab.ie.cuhk.edu.hk/projects/CelebA.html) dataset by following [CelebA-HQ](https://github.com/tkarras/progressive_growing_of_gans). Each image in the dataset is accompanied by a semantic mask, sketch, descriptive text, and an image with a transparent background.
 
-Multi-Modal-CelebA-HQ can be used to **train and evaluate algorithms of text-to-image generation, text-guided image manipulation, sketch-to-image generation, image caption, and VQA**. This dataset is proposed and used in **[TediGAN](https://github.com/weihaox/TediGAN)**.
+Multi-Modal-CelebA-HQ can be used to train and evaluate algorithms for a range of tasks, including text-to-image generation, text-guided image manipulation, sketch-to-image generation, image captioning, and visual question answering. This dataset is introduced and employed in [TediGAN](https://github.com/weihaox/TediGAN).
+
+**TediGAN: Text-Guided Diverse Face Image Generation and Manipulation.**<br>
+[Weihao Xia](https://weihaox.github.io/), [Yujiu Yang](), [Jing-Hao Xue](), and [Baoyuan Wu]().<br>
+CVPR 2021. <br>
+
+## Updates
+
+- [04/10/2023] The scripts for text and sketch generation have been added to the repository. 
+- [06/12/2020] The paper is released on ArXiv.
+- [11/13/2020] The multi-modal-celeba-hq dataset has been released.
 
 ## Data Generation
+
+### Description
 
 * The textual descriptions are generated using probabilistic context-free grammar (PCFG) based on the given attributes. We create ten unique single sentence descriptions per image to obtain more training data following the format of the popular [CUB](http://www.vision.caltech.edu/visipedia/CUB-200-2011.html) dataset and [COCO](http://cocodataset.org/#download) dataset. The previous study proposed [CelebTD-HQ](https://arxiv.org/abs/2005.04909), but it is not publicly available.
 * For label, we use CelebAMask-HQ dataset, which contains manually-annotated semantic mask of facial attributes corresponding to CelebA-HQ. 
 * For sketches, we follow the same data generation pipeline as in [DeepFaceDrawing](http://www.geometrylearning.com/DeepFaceDrawing/). We first apply Photocopy filter in Photoshop to extract edges, which preserves facial details and introduces excessive noise, then apply the [sketch-simplification](https://github.com/bobbens/sketch_simplification) to get edge maps resembling hand-drawn sketches.
 * For background removing, we use an open-source tool [Rembg](https://github.com/danielgatis/rembg) and a commercial software [removebg](https://www.remove.bg/). Different backgrounds can be further added using image composition or harmonization methods like [DoveNet](https://github.com/bcmi/Image_Harmonization_Datasets).
 
+### Usage
+
+This section outlines the process of generating the data for our task. 
+
+The scripts provided here are not restricted to the CelebA-HQ dataset and can be utilized to preprocess any dataset that includes attribute annotations, be it image, video, or 3D shape data. This flexibility enables the creation of custom datasets that meet specific requirements. For example, the create_caption.py script can be applied to generate diverse descriptions for each video by using video facial attributes (e.g., those provided by [CelebV-HQ](https://celebv-hq.github.io/)), leading to a text-video dataset, similar to [CelebV-Text](https://github.com/celebv-text/CelebV-Text).
+
+#### Text
+
+Please download celeba-hq-attribute.txt and run the following script.
+
+```Shell
+python create_caption.py
+```
+
+Kindly complete the [form](https://forms.gle/U3yBic3XFUrLfdey6) to request the processing script. The generated textual descriptions can be found at ./celeba_caption.
+
+#### Sketch
+
+If Photoshop is available to you, please apply the Photocopy filter in Photoshop to extract edges. Photoshop allows batch processing so you don't have to mannually process each image. The Sobel operator is an lternative way to extract edges when Photoshop is unavailable or a simpler approach is preferred. This process preserves facial details but introduces excessive noise. The [sketch-simplification](https://github.com/bobbens/sketch_simplification) model is applied to get edge maps resembling hand-drawn sketches.
+
+The sketch simplification model requires torch==0.4.1 and torchvision==0.2.1. 
+
+```Shell
+python create_sketch.py
+```
+The generated sketches can be found at ./celeba_sketch.
+
 ## Overview
 
-![image](https://github.com/weihaox/Multi-Modal-CelebA-HQ/blob/main/images/sample.png)
+![image](https://github.com/weihaox/Multi-Modal-CelebA-HQ/blob/main/assets/sample.png)
 
-**Note:** Upon request, the download links of raw data and annotations have been removed from this repo. Please redirect to their original [site](https://github.com/switchablenorms/CelebAMask-HQ) for the raw data and email me for the post-processing scripts. 
+**Note:** Upon request, the download links of raw data and annotations have been removed from this repo. Please redirect to their original [site](https://github.com/switchablenorms/CelebAMask-HQ) for the raw data.~~and email me for the post-processing scripts.~~ The scripts for text and sketch generation have been added to the repository. 
 
 ~~All data is hosted on Google Drive~~ (not available).
 
@@ -55,9 +94,9 @@ Karras *et. al.*, "Progressive Growing of GANs for Improved Quality, Stability, 
 * **CelebAMask-HQ** manually-annotated masks with the size of 512 x 512 and 19 classes including all facial components and accessories such as skin, nose, eyes, eyebrows, ears, mouth, lip, hair, hat, eyeglass, earring, necklace, neck, and cloth. It was collected by the following paper :<br/>
 Lee *et. al.*, "MaskGAN: Towards Diverse and Interactive Facial Image Manipulation", in Computer Vision and Pattern Recognition (CVPR), 2020
 
-## License and Citation
+## Citation
 
-If you find the dataset and pretrained models helpful for your research, please consider to cite:
+If you find the dataset, processing scripts, and pretrained models useful for your research, please consider citing our paper:
 
 ```bibtex
 @inproceedings{xia2021tedigan,
@@ -67,11 +106,20 @@ If you find the dataset and pretrained models helpful for your research, please 
   year={2021}
 }
 
-@article{xia2021open,
+@article{xia2021towards,
   title={Towards Open-World Text-Guided Face Image Generation and Manipulation},
   author={Xia, Weihao and Yang, Yujiu and Xue, Jing-Hao and Wu, Baoyuan},
   journal={arxiv preprint arxiv: 2104.08910},
   year={2021}
+}
+```
+If you use images and masks, please cite:
+```bibtex
+@inproceedings{liu2015faceattributes,
+ title = {Deep Learning Face Attributes in the Wild},
+ author = {Liu, Ziwei and Luo, Ping and Wang, Xiaogang and Tang, Xiaoou},
+ booktitle = {Proceedings of International Conference on Computer Vision (ICCV)},
+ year = {2015} 
 }
 
 @inproceedings{karras2017progressive,
@@ -81,15 +129,6 @@ If you find the dataset and pretrained models helpful for your research, please 
   year={2018}
 }
 
-@inproceedings{liu2015faceattributes,
- title = {Deep Learning Face Attributes in the Wild},
- author = {Liu, Ziwei and Luo, Ping and Wang, Xiaogang and Tang, Xiaoou},
- booktitle = {Proceedings of International Conference on Computer Vision (ICCV)},
- year = {2015} 
-}
-```
-If you use the labels, please cite:
-```bibtex
 @inproceedings{CelebAMask-HQ,
   title={MaskGAN: Towards Diverse and Interactive Facial Image Manipulation},
   author={Lee, Cheng-Han and Liu, Ziwei and Wu, Lingyun and Luo, Ping},
@@ -97,4 +136,7 @@ If you use the labels, please cite:
   year={2020}
 }
 ```
+
+## License
+
 The use of this software is RESTRICTED to **non-commercial research and educational purposes**. The license is the same as in CelebAMask-HQ.
