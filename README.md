@@ -10,13 +10,13 @@
 Multi-Modal-CelebA-HQ can be used to train and evaluate algorithms for a range of tasks, including text-to-image generation, text-guided image manipulation, sketch-to-image generation, image captioning, and visual question answering. This dataset is introduced and employed in [TediGAN](https://github.com/weihaox/TediGAN).
 
 **TediGAN: Text-Guided Diverse Face Image Generation and Manipulation.**<br>
-[Weihao Xia](https://weihaox.github.io/), [Yujiu Yang](), [Jing-Hao Xue](), and [Baoyuan Wu]().<br>
+[Weihao Xia](), [Yujiu Yang](https://sites.google.com/view/iigroup-thu/home), [Jing-Hao Xue](https://www.homepages.ucl.ac.uk/~ucakjxu/), and [Baoyuan Wu](https://sites.google.com/site/baoyuanwu2015/).<br>
 CVPR 2021. <br>
 
 ## Updates
-
+- [07/10/2023] 3DMM coefficients and corresponding rendered images have been added to the repository. 
 - [04/10/2023] The scripts for text and sketch generation have been added to the repository. 
-- [06/12/2020] The paper is released on ArXiv.
+- [06/12/2020] The paper is released on arXiv.
 - [11/13/2020] The multi-modal-celeba-hq dataset has been released.
 
 ## Data Generation
@@ -27,6 +27,7 @@ CVPR 2021. <br>
 * For label, we use CelebAMask-HQ dataset, which contains manually-annotated semantic mask of facial attributes corresponding to CelebA-HQ. 
 * For sketches, we follow the same data generation pipeline as in [DeepFaceDrawing](http://www.geometrylearning.com/DeepFaceDrawing/). We first apply Photocopy filter in Photoshop to extract edges, which preserves facial details and introduces excessive noise, then apply the [sketch-simplification](https://github.com/bobbens/sketch_simplification) to get edge maps resembling hand-drawn sketches.
 * For background removing, we use an open-source tool [Rembg](https://github.com/danielgatis/rembg) and a commercial software [removebg](https://www.remove.bg/). Different backgrounds can be further added using image composition or harmonization methods like [DoveNet](https://github.com/bcmi/Image_Harmonization_Datasets).
+* For 3DMM coefficients and the corresponding rendered image, we use [Deep3DFaceReconstruction](https://github.com/microsoft/Deep3DFaceReconstruction). Please follow the instructions for data generation. We also provide the Cleaned Face Datasets, the "cleaned" version of two popular face datasets, CelebAHQ and FFHQ, made by removing instances with extreme poses, occlusions, blurriness, or the presence of multiple individuals in the frame.
 
 ### Usage
 
@@ -36,13 +37,15 @@ The scripts provided here are not restricted to the CelebA-HQ dataset and can be
 
 #### Text
 
-Please download celeba-hq-attribute.txt and run the following script.
+Please download [celeba-hq-attribute.txt](https://github.com/switchablenorms/CelebAMask-HQ) (CelebAMask-HQ-attribute-anno.txt) and run the following script.
 
 ```Shell
 python create_caption.py
 ```
 
-Kindly complete the [form](https://forms.gle/U3yBic3XFUrLfdey6) to request the processing script. The generated textual descriptions can be found at ./celeba_caption.
+The generated textual descriptions can be found at ./celeba_caption.
+
+Please fill out the [form](https://forms.gle/U3yBic3XFUrLfdey6) to request the processing script. If feasible, please send me a follow-up email after submitting the form to remind me.
 
 #### Sketch
 
@@ -66,10 +69,14 @@ The generated sketches can be found at ./celeba_sketch.
 | Path | Size | Files | Format | Description
 | :--- | :-- | ----: | :----: | :----------
 | [multi-modal-celeba](https://drive.google.com/drive/folders/1TxsSzPhZsJNijIXPINv05IUWhG3vBU-X) | ~20 GB | 420,002 | | Main folder
-| &boxvr;&nbsp; [image](https://drive.google.com/drive/folders/1xQTeXvu7-fHR7Legsw2EgWDvSrTM4iUw) | ~2 GB | 30,000 | JPG | images from celeba-hq of size 512&times;512
-| &boxvr;&nbsp; [text](https://drive.google.com/drive/folders/1ydS2O80rxIU0XtxWzmEI0XDKWEUN4ksI) | 11 MB | 30,0000 | TXT | 10 descriptions of each image in celeba-hq
 | &boxvr;&nbsp; [train](https://drive.google.com/drive/folders/1I2YRoCOVxsFIHPQN1lAQhot9JwvzOACC) | 347 KB | 1 | PKL | filenames of training images
 | &boxvr;&nbsp; [test](https://drive.google.com/drive/folders/1AASJLlRsTHBfmgNO-12nhp4cp8Aqz_GG) | 81 KB | 1 | PKL | filenames of test images
+| &boxvr;&nbsp; [image](https://drive.google.com/drive/folders/1xQTeXvu7-fHR7Legsw2EgWDvSrTM4iUw) | ~2 GB | 30,000 | JPG | images from celeba-hq of size 512&times;512
+| &boxvr;&nbsp; [text](https://drive.google.com/drive/folders/1ydS2O80rxIU0XtxWzmEI0XDKWEUN4ksI) | 11 MB | 30,0000 | TXT | 10 descriptions of each image in celeba-hq
+| &boxvr;&nbsp; [coeff]() |  MB | 29,437 | MAT | 3dmm coefficients of each image in celeba-hq
+| &boxvr;&nbsp; [rendered]() |  GB | 29,437 | PNG | rendered image of each image in celeba-hq of size 256&times;256
+
+For the required 3DMM coefficients and rendered images of each image in the FFHQ dataset, please refer to [this link](https://github.com/weihaox/cleaned-celebahq-ffhq).
 
 ## Pretrained Models
 
